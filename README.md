@@ -4,7 +4,7 @@
 
 It is a Shell Script which can build a KMS Server automatically.
 
-Please note that this script can only run on x86 or x64 architecture Linux OS. Multiplatform script is coming soon.
+Please note that this script can only run on x64 architecture Linux OS. Multiplatform script is coming soon.
 
 `HOW TO USE`
 

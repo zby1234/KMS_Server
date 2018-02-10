@@ -25,6 +25,7 @@ fi
 git clone https://github.com/uselibrary/KMS_Server
 mv KMS_Server vlmcsd
 mv vlmcsd /usr/local/
+mkdir /usr/local/KMS/
 ln -sv /usr/local/vlmcsd/ /usr/local/KMS/
 echo "export PATH=/usr/local/KMS/binaries/Linux/intel/static:\$PATH" > /etc/profile.d/vlmcs.sh
 source /etc/profile.d/vlmcs.sh
