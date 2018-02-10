@@ -27,9 +27,9 @@ mv KMS_Server vlmcsd
 mv vlmcsd /usr/local/
 mkdir /usr/local/KMS/
 ln -sv /usr/local/vlmcsd/ /usr/local/KMS/
-echo "export PATH=/usr/local/KMS/binaries/Linux/intel/static:\$PATH" > /etc/profile.d/vlmcs.sh
+echo "export PATH=/usr/local/KMS/vlmcsd/binaries/Linux/intel/static:\$PATH" > /etc/profile.d/vlmcs.sh
 source /etc/profile.d/vlmcs.sh
-chmod +x /usr/local/KMS/binaries/Linux/intel/static/*
+chmod +x /usr/local/KMS/vlmcsd/binaries/Linux/intel/static/*
 echo "vlmcsd-x64-musl-static" >> /etc/rc.local
 vlmcsd-x64-musl-static
 echo "KMS Server is running"
