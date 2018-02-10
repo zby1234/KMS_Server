@@ -22,3 +22,13 @@ else
   exit
 fi
 #Build KMS Server
+git clone https://github.com/uselibrary/KMS_Server
+mv KMS_Server vlmcsd
+mv vlmcsd /usr/local/
+ln -sv /usr/local/vlmcsd/ /usr/local/KMS/
+echo "export PATH=/usr/local/KMS/binaries/Linux/intel/static:\$PATH" > /etc/profile.d/vlmcs.sh
+source /etc/profile.d/vlmcs.sh
+chmod +x /usr/local/KMS/binaries/Linux/intel/static/*
+echo "vlmcsd-x64-musl-static" >> /etc/rc.local
+vlmcsd-x64-musl-static
+echo "KMS Server is running"
