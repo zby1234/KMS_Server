@@ -32,4 +32,10 @@ source /etc/profile.d/vlmcs.sh
 chmod +x /usr/local/KMS/vlmcsd/binaries/Linux/intel/static/*
 echo "vlmcsd-x64-musl-static" >> /etc/rc.local
 vlmcsd-x64-musl-static
-echo "KMS Server is running"
+#Check vlmcsd status
+PIDS=`ps -ef |grep vlmcsd |grep -v grep | awk '{print $2}'`
+if [ "$PIDS" != "" ]; then
+  echo "vlmcsd is runing!"
+else
+  echo "vlmcsd is NOT running!"
+fi
